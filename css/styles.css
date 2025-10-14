@@ -150,8 +150,6 @@ img {
     color: #404bbf;
 }
 
-/* -------------------- MAIN-PAGE (HERO) -------------------- */
-
 .main-page {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -206,8 +204,6 @@ h1 {
     background-color: #404bbf;
 }
 
-/* -------------------- SECTIONS COMMON -------------------- */
-
 .section {
     padding: 120px 0;
 }
@@ -244,8 +240,6 @@ section h2 {
     margin: 0;
 }
 
-/* -------------------- VALUES (B4) -------------------- */
-
 .values-section ul {
     display: flex;
     gap: 24px;
@@ -264,8 +258,6 @@ section h2 {
     border-radius: 4px;
     margin-bottom: 8px;
 }
-
-/* -------------------- TEAM (B5) -------------------- */
 
 .team-section {
     background-color: #f4f4fd;
@@ -313,7 +305,10 @@ section h2 {
     background-color: #404bbf;
 }
 
-/* -------------------- PORTFOLIO (B6) -------------------- */
+.social-links-icon {
+    fill: #f4f4fd;
+    display: block;
+}
 
 .portfolio-list {
     display: flex;
@@ -367,8 +362,6 @@ section h2 {
     transform: translateY(0);
 }
 
-/* -------------------- FOOTER (B7) -------------------- */
-
 .page-footer {
     background-color: #2e2f42;
     padding: 100px 0;
@@ -396,10 +389,6 @@ section h2 {
     letter-spacing: 0.02em;
 }
 
-.footer-block-social {
-    /* Убран лишний margin-right: 80px для лучшего позиционирования */
-}
-
 .social-media-text {
     font-weight: 500;
     font-size: 16px;
@@ -411,10 +400,10 @@ section h2 {
 
 .footer-block-social .social-links-list {
     gap: 16px;
-    /* Меньший гэп для футера */
 }
 
 .footer-block-social .social-links-link:hover,
 .footer-block-social .social-links-link:focus {
     background-color: #31d0aa;
 }
+
