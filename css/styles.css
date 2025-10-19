@@ -320,10 +320,10 @@ img {
 .modal span {
     display: inline-flex;
 }
-
 /* --- Checkbox Styles --- */
 .modal-field-checkbox {
     margin-bottom: 24px;
+    display: inline-flex;
 }
 
 .check-text {
