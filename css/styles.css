@@ -1,9 +1,10 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #434455;
     background-color: #fff;
 }
 
+/* reset */
 ul,
 ol {
     list-style-type: none;
@@ -31,25 +32,27 @@ img {
     height: auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    margin: -1px;
+}
+
+/* common */
 .container {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
+/* header */
 .page-header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -67,7 +70,7 @@ img {
 }
 
 .logo {
-    font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
@@ -112,7 +115,7 @@ img {
 }
 
 .nav-link.current::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -146,10 +149,245 @@ img {
 .nav-link:hover,
 .nav-link:focus,
 .contacts-link:hover,
-.contacts-link:focus {
+.contacts-link:focus,
+.nav-link.current {
     color: #404bbf;
 }
 
+/* Modal and Backdrop Styles */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fcfcfc;
+    padding: 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -100%);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-close-icon {
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+    fill: #ffffff;
+}
+/* End of Modal and Backdrop Styles */
+
+/* --- Modal Form Styles --- */
+.modal-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-field {
+    margin-bottom: 8px;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.modal-input-wrap {
+    position: relative;
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: transparent;
+    color: #2e2f42;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+    border-color: #4d5ae5;
+}
+
+.modal-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus + .modal-icon {
+    fill: #4d5ae5;
+}
+
+/* Comment field */
+.modal-field-comment {
+    margin-bottom: 16px;
+}
+
+.modal-comment {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 8px 16px;
+    resize: none;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-comment:focus {
+    border-color: #4d5ae5;
+}
+
+/* --- Checkbox Styles --- */
+.modal-field-checkbox {
+    margin-bottom: 24px;
+}
+
+.check-text {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.check-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    margin-right: 8px;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-input:checked + .check-text .check-box {
+    background-color: #404bbf;
+    border: none;
+    fill: #f4f4fd;
+}
+
+.privacy-link {
+    color: #4d5ae5;
+    text-decoration: underline;
+    margin-left: 3px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-link:hover,
+.privacy-link:focus {
+    color: #404bbf;
+}
+
+.modal-submit-btn {
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background-color: #4d5ae5;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+    background-color: #404bbf;
+}
+
+/* Main Page (Hero) */
 .main-page {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -161,7 +399,6 @@ img {
     max-width: 1440px;
     height: 600px;
     margin: 0 auto;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,6 +441,7 @@ h1 {
     background-color: #404bbf;
 }
 
+/* Sections */
 .section {
     padding: 120px 0;
 }
@@ -240,6 +478,7 @@ section h2 {
     margin: 0;
 }
 
+/* Values Section */
 .values-section ul {
     display: flex;
     gap: 24px;
@@ -249,6 +488,7 @@ section h2 {
     width: calc((100% - 3 * 24px) / 4);
 }
 
+/* ИСПРАВЛЕНИЕ: Добавлен border: 1px solid #8e8f99; */
 .values-icon-box {
     display: flex;
     align-items: center;
@@ -257,8 +497,10 @@ section h2 {
     background-color: #f4f4fd;
     border-radius: 4px;
     margin-bottom: 8px;
+    border: 1px solid #8e8f99; 
 }
 
+/* Team Section */
 .team-section {
     background-color: #f4f4fd;
 }
@@ -310,6 +552,7 @@ section h2 {
     display: block;
 }
 
+/* Portfolio Section */
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -362,6 +605,7 @@ section h2 {
     transform: translateY(0);
 }
 
+/* Footer */
 .page-footer {
     background-color: #2e2f42;
     padding: 100px 0;
@@ -370,6 +614,7 @@ section h2 {
 .page-footer .container {
     display: flex;
     align-items: baseline;
+    gap: 24px;
 }
 
 .footer-block-main {
@@ -405,4 +650,65 @@ section h2 {
 .footer-block-social .social-links-link:hover,
 .footer-block-social .social-links-link:focus {
     background-color: #31d0aa;
+}
+
+/* --- Footer Subscribe Form Styles --- */
+.footer-block-subscribe {
+    margin-left: 80px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 24px;
+}
+
+.subscribe-input {
+    width: 264px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 16px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-input:focus {
+    border-color: #4d5ae5;
+}
+
+.subscribe-input::placeholder {
+    color: #ffffff;
+}
+
+.subscribe-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background-color: #4d5ae5;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    min-width: 165px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+    background-color: #404bbf;
+}
+
+.subscribe-icon {
+    fill: #ffffff;
 }
