@@ -319,20 +319,12 @@ img {
     border-color: #4d5ae5;
 }
 
-/* ✅ Застосовуємо display: inline-flex; для всіх span у модалці */
-.modal span {
-    display: inline-flex;
-}
-
-/* --- Checkbox Styles --- */
 .modal-field-checkbox {
     margin-bottom: 24px;
-    /* display: inline-flex; видалено, якщо воно було зайвим */
 }
 
 .check-text {
     display: flex;
-    /* Повертаємо на flex, щоб коректно вирівняти чекбокс та текст */
     align-items: center;
     font-size: 12px;
     line-height: 1.17;
@@ -341,7 +333,7 @@ img {
 }
 
 .check-box {
-    /* Тут display: inline-flex; успадковується від .modal span */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
@@ -357,7 +349,6 @@ img {
 }
 
 .check-input:checked+.check-text .check-box {
-    /* display: inline-flex; видалено, оскільки воно вже задано для .modal span */
     background-color: #404bbf;
     border: none;
     fill: #f4f4fd;
