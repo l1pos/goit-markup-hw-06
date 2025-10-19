@@ -242,7 +242,7 @@ img {
 }
 
 .modal-form {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
 }
 
@@ -261,6 +261,7 @@ img {
 
 .modal-input-wrap {
     position: relative;
+    display: inline-flex;
 }
 
 .modal-input {
