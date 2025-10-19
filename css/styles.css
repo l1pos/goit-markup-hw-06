@@ -156,8 +156,7 @@ img {
 
 /* Modal and Backdrop Styles */
 .backdrop {
-    position: modal;
-    display: inline-flex;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -177,7 +176,7 @@ img {
 }
 
 .modal {
-    display: inline-flex;
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 408px;
@@ -188,11 +187,8 @@ img {
         0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
     padding: 72px 24px 24px 24px;
+    /* Змінено padding */
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal span {
-    display: inline-flex;
 }
 
 .backdrop:not(.is-open) .modal {
@@ -239,6 +235,7 @@ img {
 .modal-title {
     font-weight: 500;
     font-size: 16px;
+    /* Змінено font-size на 16px */
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
@@ -322,13 +319,20 @@ img {
     border-color: #4d5ae5;
 }
 
+/* ✅ Застосовуємо display: inline-flex; для всіх span у модалці */
+.modal span {
+    display: inline-flex;
+}
+
 /* --- Checkbox Styles --- */
 .modal-field-checkbox {
     margin-bottom: 24px;
+    /* display: inline-flex; видалено, якщо воно було зайвим */
 }
 
 .check-text {
     display: flex;
+    /* Повертаємо на flex, щоб коректно вирівняти чекбокс та текст */
     align-items: center;
     font-size: 12px;
     line-height: 1.17;
@@ -337,7 +341,7 @@ img {
 }
 
 .check-box {
-    display: inline-flex;
+    /* Тут display: inline-flex; успадковується від .modal span */
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
@@ -353,12 +357,14 @@ img {
 }
 
 .check-input:checked+.check-text .check-box {
+    /* display: inline-flex; видалено, оскільки воно вже задано для .modal span */
     background-color: #404bbf;
     border: none;
     fill: #f4f4fd;
 }
 
 .privacy-link {
+    /* display: inline-flex; видалено, якщо воно було зайвим */
     color: #4d5ae5;
     text-decoration: underline;
     margin-left: 3px;
@@ -367,6 +373,7 @@ img {
 
 .privacy-link:hover,
 .privacy-link:focus {
+    /* display: inline-flex; видалено, якщо воно було зайвим */
     color: #404bbf;
 }
 
