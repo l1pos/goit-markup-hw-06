@@ -488,7 +488,6 @@ section h2 {
     width: calc((100% - 3 * 24px) / 4);
 }
 
-/* ИСПРАВЛЕНИЕ: Добавлен border: 1px solid #8e8f99; */
 .values-icon-box {
     display: flex;
     align-items: center;
