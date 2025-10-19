@@ -317,6 +317,10 @@ img {
     border-color: #4d5ae5;
 }
 
+.modal span {
+    display: inline-flex;
+}
+
 /* --- Checkbox Styles --- */
 .modal-field-checkbox {
     margin-bottom: 24px;
