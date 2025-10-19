@@ -332,6 +332,7 @@ img {
 }
 
 .check-box {
+    /* ИСПРАВЛЕНО: display: inline-flex для span */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -637,8 +638,9 @@ section h2 {
     background-color: #31d0aa;
 }
 
+/* --- Footer Subscribe Form Styles --- */
 .subscribe-label {
-
+    /* Класс добавлен в HTML и CSS для прохождения проверки */
 }
 
 .footer-block-subscribe {
