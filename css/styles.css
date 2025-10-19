@@ -332,10 +332,13 @@ img {
     color: #8e8f99;
 }
 
-.check-box {
+span.check-box {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+.check-box {
     flex-shrink: 0;
     width: 16px;
     height: 16px;
