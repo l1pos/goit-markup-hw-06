@@ -352,12 +352,14 @@ img {
 }
 
 .check-input:checked+.check-text .check-box {
+    display: inline-flex;
     background-color: #404bbf;
     border: none;
     fill: #f4f4fd;
 }
 
 .privacy-link {
+    display: inline-flex;
     color: #4d5ae5;
     text-decoration: underline;
     margin-left: 3px;
@@ -366,10 +368,12 @@ img {
 
 .privacy-link:hover,
 .privacy-link:focus {
+    display: inline-flex;
     color: #404bbf;
 }
 
 .modal-submit-btn {
+    display: inline-flex;
     display: block;
     cursor: pointer;
     font-weight: 500;
