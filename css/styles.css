@@ -334,11 +334,11 @@ img {
 
 span.check-box {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .check-box {
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
     width: 16px;
     height: 16px;
