@@ -242,7 +242,7 @@ img {
 }
 
 .modal-form {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -261,7 +261,6 @@ img {
 
 .modal-input-wrap {
     position: relative;
-    display: inline-flex;
 }
 
 .modal-input {
@@ -324,7 +323,7 @@ img {
 }
 
 .check-text {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-size: 12px;
     line-height: 1.17;
@@ -334,7 +333,6 @@ img {
 
 .check-box {
     display: inline-flex;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
