@@ -349,6 +349,7 @@ img {
 }
 
 .check-input:checked+.check-text .check-box {
+    display: inline-flex;
     background-color: #404bbf;
     border: none;
     fill: #f4f4fd;
