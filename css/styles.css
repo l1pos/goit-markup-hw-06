@@ -759,6 +759,15 @@ section h2 {
     background-color: #404bbf;
 }
 
+.subscribe-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
 .subscribe-icon {
     width: 24px;
     height: 24px;
