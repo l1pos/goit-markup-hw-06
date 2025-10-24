@@ -539,6 +539,11 @@ section h2 {
     display: block;
 }
 
+.social-links-link[href*="instagram"] .social-links-icon {
+    stroke: #f4f4fd;
+    fill: none;
+}
+
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -599,11 +604,17 @@ section h2 {
 .page-footer .container {
     display: flex;
     align-items: baseline;
-    gap: 24px;
+    gap: 80px;
+}
+
+.footer-group {
+    display: flex;
+    align-items: baseline;
+    gap: 120px;
 }
 
 .footer-block-main {
-    margin-right: 120px;
+    max-width: 264px;
 }
 
 .footer-logo {
@@ -612,11 +623,19 @@ section h2 {
     padding: 0;
 }
 
+.footer-logo .logo-part {
+    color: #f4f4fd;
+}
+
 .footer-text {
     color: #f4f4fd;
-    max-width: 264px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+.footer-block-social {
+    display: flex;
+    flex-direction: column;
 }
 
 .social-media-text {
@@ -629,12 +648,40 @@ section h2 {
 }
 
 .footer-block-social .social-links-list {
+    display: flex;
     gap: 16px;
+}
+
+.footer-block-social .social-links-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-block-social .social-links-link:hover,
 .footer-block-social .social-links-link:focus {
     background-color: #31d0aa;
+}
+
+.social-links-icon {
+    fill: #f4f4fd;
+}
+
+.social-links-link[href*="instagram"] .social-links-icon {
+    stroke: #f4f4fd;
+    fill: transparent;
+    stroke-width: 1.5;
+}
+
+.footer-block-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .subscribe-form {
