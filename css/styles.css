@@ -4,7 +4,6 @@ body {
     background-color: #fff;
 }
 
-/* reset */
 ul,
 ol {
     list-style-type: none;
@@ -45,14 +44,12 @@ img {
     margin: -1px;
 }
 
-/* common */
 .container {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
-/* header */
 .page-header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -154,7 +151,6 @@ img {
     color: #404bbf;
 }
 
-/* Modal and Backdrop Styles */
 .backdrop {
     position: fixed;
     top: 0;
@@ -228,9 +224,6 @@ img {
     fill: #ffffff;
 }
 
-/* End of Modal and Backdrop Styles */
-
-/* --- Modal Form Styles --- */
 .modal-title {
     font-weight: 500;
     font-size: 16px;
@@ -292,7 +285,6 @@ img {
     fill: #4d5ae5;
 }
 
-/* Comment field */
 .modal-field-comment {
     margin-bottom: 16px;
 }
@@ -387,7 +379,6 @@ img {
     background-color: #404bbf;
 }
 
-/* Main Page (Hero) */
 .main-page {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -441,7 +432,6 @@ h1 {
     background-color: #404bbf;
 }
 
-/* Sections */
 .section {
     padding: 120px 0;
 }
@@ -478,7 +468,6 @@ section h2 {
     margin: 0;
 }
 
-/* Values Section */
 .values-section ul {
     display: flex;
     gap: 24px;
@@ -499,7 +488,6 @@ section h2 {
     border: 1px solid #8e8f99;
 }
 
-/* Team Section */
 .team-section {
     background-color: #f4f4fd;
 }
@@ -551,7 +539,6 @@ section h2 {
     display: block;
 }
 
-/* Portfolio Section */
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -604,7 +591,6 @@ section h2 {
     transform: translateY(0);
 }
 
-/* Footer */
 .page-footer {
     background-color: #2e2f42;
     padding: 100px 0;
@@ -651,11 +637,6 @@ section h2 {
     background-color: #31d0aa;
 }
 
-/* --- Footer Subscribe Form Styles --- */
-.footer-block-subscribe {
-    margin-left: 80px;
-}
-
 .subscribe-form {
     display: flex;
     gap: 24px;
@@ -687,17 +668,14 @@ section h2 {
 .subscribe-btn {
     min-width: 165px;
     height: 40px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-
     color: #fff;
     background-color: #4d5ae5;
     border: none;
