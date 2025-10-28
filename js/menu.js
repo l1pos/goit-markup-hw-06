@@ -1,13 +1,11 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
-const closeMenuBtn = document.querySelector(".menu-close");
+const menuClose = document.querySelector(".menu-close");
 
 menuToggle.addEventListener("click", () => {
   mobileMenu.classList.add("is-open");
-  menuToggle.style.display = "none";
 });
 
-closeMenuBtn.addEventListener("click", () => {
+menuClose.addEventListener("click", () => {
   mobileMenu.classList.remove("is-open");
-  menuToggle.style.display = "block";
 });
