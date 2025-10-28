@@ -678,14 +678,12 @@ section h2 {
     fill: #f4f4fd;
 }
 
-/* Instagram — окремо (stroke замість fill) */
 .social-links-link[href*="instagram"] .social-links-icon {
     stroke: #f4f4fd;
     fill: transparent;
     stroke-width: 1.5;
 }
 
-/* ==== Підписка ==== */
 .footer-block-subscribe {
     display: flex;
     flex-direction: column;
@@ -763,7 +761,6 @@ section h2 {
 
 /* ================== МЕДИА ================== */
 
-/* === мобильная до 767px === */
 @media (max-width: 767px) {
     .main-page {
         height: auto;
@@ -838,13 +835,11 @@ section h2 {
         width: 165px;
     }
 
-    /* скрываем desktop меню */
     .nav-list,
     .contacts {
         display: none;
     }
 
-    /* показываем кнопку бургер */
     .menu-toggle {
         display: flex;
         margin-left: auto;
@@ -904,7 +899,6 @@ section h2 {
     }
 }
 
-/* === retina background === */
 @media (min-resolution: 2dppx) {
     .main-page {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -912,9 +906,6 @@ section h2 {
     }
 }
 
-/* ===================== ФИКС МОБИЛЬНОГО МЕНЮ ===================== */
-
-/* Ховаємо меню за замовчуванням */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -931,17 +922,14 @@ section h2 {
     pointer-events: none;
     transition: opacity 250ms ease, visibility 250ms ease;
     z-index: 9999;
-    /* ✅ чтобы перекрыть весь контент */
 }
 
-/* Показ меню */
 .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
 
-/* Кнопка закрытия меню */
 .menu-close {
     position: absolute;
     top: 24px;
@@ -951,7 +939,6 @@ section h2 {
     cursor: pointer;
 }
 
-/* Контент мобильного меню */
 .mobile-nav {
     display: flex;
     flex-direction: column;
@@ -971,7 +958,6 @@ section h2 {
     color: #404bbf;
 }
 
-/* Контакты и соцсети */
 .mobile-contacts {
     display: flex;
     flex-direction: column;
@@ -996,7 +982,6 @@ section h2 {
     fill: #4d5ae5;
 }
 
-/* ✅ Скрываем desktop-контакты и nav при мобильном меню */
 @media (max-width: 767px) {
 
     .nav-list,
@@ -1015,7 +1000,6 @@ section h2 {
     }
 }
 
-/* ✅ На планшетах и десктопах прячем бургер */
 @media (min-width: 768px) {
 
     .menu-toggle,
