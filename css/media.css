@@ -1,0 +1,410 @@
+/* media.css */
+
+@media screen and (min-width: 768px) {
+
+    /* --- TABLET STYLES (768px) --- */
+    .container {
+        max-width: 768px;
+        padding: 0 15px;
+    }
+
+    .header-container {
+        justify-content: flex-start;
+        min-height: auto;
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .header-nav {
+        display: flex;
+    }
+
+    .header-logo {
+        margin-right: 120px;
+        padding: 24px 0;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 24px 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-link.current {
+        position: relative;
+        color: #404bbf;
+    }
+
+    .nav-link.current::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #404bbf;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        color: #404bbf;
+    }
+
+    .contacts {
+        display: block;
+        font-style: normal;
+        margin-left: auto;
+    }
+
+    .contacts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .contacts-link {
+        display: block;
+        padding: 8px 0;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contacts-link:hover,
+    .contacts-link:focus {
+        color: #404bbf;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .main-page {
+        height: 436px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url("../images/bg/people-office.png");
+    }
+
+    @media (min-resolution: 192dpi),
+    (min-resolution: 2dppx),
+    (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+    (min-width: 768px) and (min-resolution: 192dpi) {
+        .main-page {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url("../images/bg/people-office@2x.png");
+        }
+    }
+
+    .main-page .container {
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
+
+    h1 {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
+        margin-bottom: 36px;
+    }
+
+    .section {
+        padding: 96px 0;
+    }
+
+    .values-section ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        row-gap: 72px;
+    }
+
+    .values-section li {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .values-title {
+        text-align: left;
+    }
+
+    .team-section .container ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        row-gap: 64px;
+    }
+
+    .team-card {
+        width: calc((100% - 24px) / 2);
+        margin: 0;
+    }
+
+    .portfolio-list {
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 24px;
+        flex-wrap: wrap;
+        row-gap: 48px;
+        padding-left: 0;
+    }
+
+    .portfolio-item {
+        width: calc((100% - 24px) / 2);
+        margin: 0;
+    }
+
+    .page-footer {
+        padding: 96px 0;
+    }
+
+    .page-footer .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        gap: 0;
+        row-gap: 72px;
+        padding-left: 15px;
+        text-align: left;
+    }
+
+    .footer-block-main-social-wrap {
+        display: flex;
+        justify-content: flex-start;
+        width: calc(264px + 24px + 208px);
+    }
+
+    .footer-block-main {
+        max-width: 264px;
+        margin-right: 24px;
+        display: block;
+        text-align: left;
+    }
+
+    .footer-block-social {
+        max-width: 208px;
+        margin-right: 0;
+        display: block;
+        text-align: left;
+    }
+
+    .footer-block-subscribe {
+        transform: translateX(calc(((100% - 496px) / 2) * -1));
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .footer-block-social .social-links-list {
+        justify-content: flex-start;
+    }
+
+    .footer-block-main .footer-text {
+        text-align: left;
+    }
+
+    .subscribe-form {
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        width: auto;
+    }
+
+    .subscribe-label {
+        width: auto;
+    }
+
+    .subscribe-input {
+        width: 264px;
+    }
+
+    .subscribe-btn {
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 1158px) {
+
+    /* --- DESKTOP STYLES (1158px) --- */
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+
+    /* HEADER */
+    .header-logo {
+        margin-right: 76px;
+    }
+
+    .contacts-list {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .contacts-link {
+        padding: 24px 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* HERO */
+    .main-page {
+        height: 600px;
+        max-width: 1440px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url("../images/bg/people-office.png");
+    }
+
+    @media (min-resolution: 192dpi),
+    (min-resolution: 2dppx),
+    (min-width: 1158px) and (-webkit-min-device-pixel-ratio: 2),
+    (min-width: 1158px) and (min-resolution: 192dpi) {
+        .main-page {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url("../images/bg/people-office@2x.png");
+        }
+    }
+
+    .main-page .container {
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+
+    h1 {
+        margin-bottom: 48px;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 120px 0;
+    }
+
+    .values-section ul {
+        gap: 24px;
+    }
+
+    .values-section li {
+        width: calc((100% - 3 * 24px) / 4);
+    }
+
+    .values-icon-box {
+        display: flex;
+    }
+
+    .values-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    /* TEAM */
+    .team-card {
+        width: calc((100% - 3 * 24px) / 4);
+    }
+
+    /* PORTFOLIO */
+    .portfolio-list {
+        column-gap: 24px;
+        row-gap: 48px;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-item {
+        width: calc((100% - 2 * 24px) / 3);
+        margin: 0;
+    }
+
+    /* FOOTER */
+    .page-footer {
+        padding: 100px 0;
+    }
+
+    .page-footer .container {
+        padding-left: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 0;
+        row-gap: 0;
+        text-align: left;
+    }
+
+    .footer-block-main-social-wrap {
+        display: inline-block;
+        width: auto;
+    }
+
+    .footer-block-main,
+    .footer-block-social,
+    .footer-block-subscribe {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        width: auto;
+        max-width: none;
+    }
+
+    .footer-block-main {
+        width: 264px;
+        margin-right: 120px;
+        text-align: left;
+    }
+
+    .footer-block-social {
+        width: 208px;
+        margin-right: 80px;
+        text-align: left;
+    }
+
+    .footer-block-subscribe {
+        width: auto;
+        margin-left: 0;
+        /* Виправлено */
+        text-align: left;
+    }
+
+    .footer-block-main .footer-text {
+        text-align: left;
+    }
+
+    .footer-block-social .social-links-list {
+        justify-content: flex-start;
+    }
+
+    .subscribe-form {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .subscribe-btn {
+        margin: 0;
+    }
+}

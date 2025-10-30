@@ -1,13 +1,22 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const mobileMenu = document.querySelector(".mobile-menu");
-const closeMenuBtn = document.querySelector(".menu-close");
+// modal.js
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-modal-open]"),
+    closeModalBtn: document.querySelector("[data-modal-close]"),
+    modal: document.querySelector("[data-modal]"),
+  };
 
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.add("is-open");
-  menuToggle.style.display = "none";
-});
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
 
-closeMenuBtn.addEventListener("click", () => {
-  mobileMenu.classList.remove("is-open");
-  menuToggle.style.display = "block";
-});
+  function toggleModal() {
+    const isOpened = refs.modal.classList.toggle("is-open");
+
+    // ДОДАНО: Блокування скролу
+    if (isOpened) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }
+})();
