@@ -233,7 +233,7 @@ img {
 
 .mobile-social {
     display: flex;
-    gap: 48px;
+    gap: 40px;
     justify-content: center;
     padding-left: 0;
 }
@@ -257,7 +257,7 @@ img {
 .main-page {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url("../images/bg/people-office.png");
+        url("../images/bg/people-office-mob@2x.png");
     background-color: #2e2f42;
     background-repeat: no-repeat;
     background-position: center;
@@ -277,14 +277,10 @@ img {
     .main-page {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url("../images/bg/people-office@2x.png");
+            url("../images/bg/people-office-mob@2x.png");
     }
 }
 
-.main-page .container {
-    padding-top: 112px;
-    padding-bottom: 112px;
-}
 
 h1 {
     font-weight: 700;
@@ -292,7 +288,7 @@ h1 {
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: #fff;
-    max-width: 320px;
+    max-width: 216px;
     margin: 0 auto 72px;
 }
 

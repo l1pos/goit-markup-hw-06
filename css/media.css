@@ -79,7 +79,6 @@
 
     .contacts-link {
         display: block;
-        padding: 8px 0;
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.02em;
@@ -100,7 +99,7 @@
         height: 436px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url("../images/bg/people-office.png");
+            url("../images/bg/people-office-tablet.jpg");
     }
 
     @media (min-resolution: 192dpi),
@@ -110,7 +109,7 @@
         .main-page {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
-                url("../images/bg/people-office@2x.png");
+                url("../images/bg/people-office-tablet.jpg");
         }
     }
 
@@ -212,7 +211,6 @@
     .footer-block-subscribe {
         width: 100%;
         max-width: 496px;
-        margin: 0 auto;
         padding-left: 0;
         text-align: left;
         transform: none;
@@ -242,7 +240,7 @@
     }
 
     .subscribe-input {
-        width: 100%;
+        width: 264px;
         height: 40px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 4px;
@@ -260,7 +258,6 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
         padding: 8px 24px;
         border-radius: 4px;
         border: none;
@@ -285,7 +282,6 @@
 
     .container {
         max-width: 1158px;
-        padding: 0 15px;
     }
 
     .header-logo {
@@ -318,7 +314,7 @@
         .main-page {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
-                url("../images/bg/people-office@2x.png");
+                url("../images/bg/people-office@2x.jpg");
         }
     }
 
@@ -345,6 +341,14 @@
 
     .values-icon-box {
         display: flex;
+        border: 1px solid #8E8F99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        margin-bottom: 8px;
+        background-color: #ffffff;
+        align-items: center;
+        justify-content: center;
     }
 
     .values-title {
